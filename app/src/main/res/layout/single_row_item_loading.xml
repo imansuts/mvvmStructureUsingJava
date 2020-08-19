@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.admin.mvvmwithoutdagger.ui.main.fragment1.adapter.ListItemLoadingViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:id="@+id/image"
+            android:onClick="@{() -> viewModel.onRetryClick()}"
+            tools:text="Loading..."
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</layout>
