@@ -117,9 +117,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         }
         @Override
         public void onClick(View view) {
-            if (listItemsViewModels.get(0).data.get() != null) {
+            if (listItemsViewModels.get(getAdapterPosition()).data.get() != null) {
                 try {
-                    Toast.makeText(activity, listItemsViewModels.get(0).data.get() , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, listItemsViewModels.get(getAdapterPosition()).data.get() , Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     Log.d(TAG, "onClick_error: "+e.getMessage());
                 }
